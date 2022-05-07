@@ -6,11 +6,13 @@ import { Home } from './components/pages/Home';
 import { Services } from './components/pages/Services';
 import { Products } from './components/pages/Products';
 import { SignUp } from './components/pages/SignUp';
+import { Footer } from './components/Footer';
 
 
 function App() {
   return (
     <>
+ 
       <Router>
         <Navbar />
         <Routes>
@@ -20,9 +22,10 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>
 
+        <Footer /> {/* took out Footer of the Home. Now it's on every page */}
       </Router>
+      
     </>
-
   );
 }
 
